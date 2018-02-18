@@ -13,7 +13,7 @@ namespace Main.Controllers
 
     public class MainsController : Controller
     {
-        private MainDBContext db = new MainDBContext();
+        private LoginDBContext db = new LoginDBContext();
         // GET: Mains
         public ActionResult Index()
         {
@@ -51,6 +51,7 @@ namespace Main.Controllers
         {
             if (ModelState.IsValid)
             {
+                main.LastLogin = DateTime.Now;
                 db.Mains.Add(main);
                 db.SaveChanges();
                 return RedirectToAction("Index");
