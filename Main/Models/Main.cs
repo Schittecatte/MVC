@@ -13,7 +13,7 @@ namespace Main.Models
         public string Password { get; set; }
         public DateTime? LastLogin { get; set; }
     }
-    public class LoginDBContext : DbContext
+    public class LogDBContext : DbContext
     {
         public DbSet<Main> Mains { get; set; }
     }

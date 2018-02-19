@@ -13,7 +13,7 @@ namespace Main.Controllers
 
     public class MainsController : Controller
     {
-        private LoginDBContext db = new LoginDBContext();
+        private LogDBContext db = new LogDBContext();
         // GET: Mains
         public ActionResult Index()
         {
